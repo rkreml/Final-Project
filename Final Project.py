@@ -1,7 +1,7 @@
 #EPSY 5200 Final Project Python Script File
 #Author: Robert T. Kreml
 
-Version = "1.0.0"
+Version = "1.1.0"
 Date = "December 17, 2019"
 
 print(f"Thank you for running this script! This is in partial fulfillment of the requirements for EPSY 5200 for the Fall 2019 Semester.")
@@ -11,6 +11,7 @@ import urllib.request
 import urllib.parse
 import json
 import statistics
+import pandas as pd
 
 city = input("Please type in the city you would like to get the weather for: ")
 
@@ -295,3 +296,11 @@ print(f"The average minimum temperature will be: {day_5_min_mean}{degreeSym}F.")
 print(f"The average maximum temperature will be: {day_5_max_mean}{degreeSym}F.")
 print(f"The average humidity will be: {day_5_hum_mean}.")
 print("\n")
+
+## PUTTING DATA INTO DATAFRAME
+
+data_frame = pd.DataFrame(list(zip(day_1_min, day_1_max, day_1_hum, day_2_min, day_2_max, day_2_hum, day_3_min, day_3_max, day_3_hum, day_4_min, day_4_max, day_4_hum, day_5_min, day_5_max, day_5_hum)), 
+index = ['12 AM', '3 AM', '6 AM', '9 AM', '12 PM', '3 PM', '6 PM', '9 PM'], 
+columns = ['Day 1 Min Temp', 'Day 1 Max Temp', 'Day 1 Humidity', 'Day 2 Min Temp', 'Day 2 Max Temp', 'Day 2 Humidity', 'Day 3 Min Temp', 'Day 3 Max Temp', 'Day 3 Humidity', 'Day 4 Min Temp', 'Day 4 Max Temp', 'Day 4 Humidity', 'Day 5 Min Temp', 'Day 5 Max Temp', 'Day 5 Humidity'])
+
+data_frame.to_csv(r'~\Weather.csv', header = True)
