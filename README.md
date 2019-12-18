@@ -4,6 +4,8 @@ EPSY 5200 Fall 2019 Final Project Files
 This README shall be a document that will consist of version control. All updates will be listed as version numbers.
 Within each version there will be a small explaination of what has changed and what lessons were leanred and which problems are still present.
 
+Current Note: This script will only run and work entirely in Mac OS. If you are a Windows user, it will run but will not export your the csv to your working directory as that is specified differently.
+
 Current Version: 1.1.0
 
 Version 0.0.1 Notes:
