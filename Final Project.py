@@ -12,8 +12,11 @@ import urllib.parse
 import json
 import statistics
 import pandas as pd
+import sys
 
-city = input("Please type in the city you would like to get the weather for: ")
+city = input("Please type in the city you would like to get the weather for or type 'NA' to cancel: ")
+if city == 'NA':
+    sys.exit()
 
 params = {"appid":"7d8615fc2e5e528e24c0a03e480f10e1", "q": city, "units": "imperial"}
 arguments = urllib.parse.urlencode(params)

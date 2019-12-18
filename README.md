@@ -51,4 +51,7 @@ Lessons learned:
 
 Version 1.2.0
 Features:
-    - 
+    - Added NA conditional statement at the start to end script if needed.
+Lessons learned:
+    - Remembered sys and .exit().
+    - Will have to work on conditional loops in a future project.
